@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    background: url('images/day3.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #32324a;
+    position: relative;
+    font-size: 14px;
+}
+.country-txt{
+    font-size: 16px;
+    font-weight: 600;
+}
+.current-date-txt{
+    font-size: 16px;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+/* UTILITIES */
+.regular-txt {
+    font-weight: 400;
+}
+/* END UTILITIES */
+
+main.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(215, 250, 250, 0.5);
+    width: 385px;
+    max-width: 100%;
+    min-height: 545px;
+    max-height: 545px;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    gap: 14px;
+}
+
+.city-input {
+    position: relative;
+    width: 100%;
+}
+
+.city-input {
+    width: 100%;
+    height: 35px;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #ffffffa8;
+}
+
+
+
+
+
+.temp-txt {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.conditions-txt {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.city-input::placeholder {
+    color: rgba(225, 225, 225, .75);
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0;
+}
+
+.city-input:focus {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.10); 
+}
+
+.search-btn {
+    position: absolute;
+    right: 40px;
+    top: 8%;
+    transform: translateY(-50%);
+    color: #ffffffa8;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Weather Info Section */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* consistent vertical spacing */
+}
+.location-date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 120px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.weather-summary-container {
+    display: flex;
+    align-items: center;
+    gap: 120px;               /* controlled spacing */
+    justify-content: center; /* stop pushing things apart */
+    margin: 8px 0;
+}
+.weather-summary-img {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+
+.condition-txt {
+    font-size: 14px;
+    text-align: center;
+}
+
+.weather-conditions-container {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Center the group */
+    gap: 120px; /* Space between humidity and wind */
+    width: 100%; /* Set a max width for the container */
+    padding: 10px 30px;
+}
+
+.condition-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-width: 100px; 
+    
+}
+
+.conditions-item svg {
+    width: 24px;
+    height: 24px;
+}
+
+.conditions-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.conditions-item span {
+    font-size: 12px;
+    gap: 5px;
+    font-weight: 400;
+}
+
+.forecast-item-container{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+    justify-content: center;
+    gap: 15px;
+
+}
+.forecast-item{
+    min-width: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.forecast-item-img{
+    width: 40px;
+    height: 40px;
+}
+/*SECTION: MESSAGE*/
+.section-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    margin-top: 12%;
+}
+
+.message-img{
+    height: 180px;
+    width: fit-content;
+}
+/*END SECTION: MESSAGE*/

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <div class="input-container">
+            <input type="text" class="city-input" id="city-input" name="city" placeholder="Enter city">
+            <button class="search-btn">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.504 13.616l-3.79-3.223c-0.392-0.353-0.811-0.514-1.149-0.499 0.895-1.048 1.435-2.407 1.435-3.893 0-3.314-2.686-6-6-6s-6 2.686-6 6 2.686 6 6 6c1.486 0 2.845-0.54 3.893-1.435-0.016 0.338 0.146 0.757 0.499 1.149l3.223 3.79c0.552 0.613 1.453 0.665 2.003 0.115s0.498-1.452-0.115-2.003zM6 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"></path>
+                </svg>
+            </button>
+        </div>
+
+        <section class="weather-info" style="display: none">
+            <div class="location-date-container">
+                <div class="location">
+                    <span class="material-symbol-out">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.657 5.304c-3.124-3.073-8.189-3.073-11.313 0-3.124 3.074-3.124 8.057 0 11.13l5.656 5.565 5.657-5.565c3.124-3.073 3.124-8.056 0-11.13zm-5.657 8.195c-.668 0-1.295-.26-1.768-.732-.975-.975-.975-2.561 0-3.536.472-.472 1.1-.732 1.768-.732s1.296.26 1.768.732c.975.975.975 2.562 0 3.536-.472.472-1.1.732-1.768.732z"></path>
+                        </svg>
+                    </span>
+                    <h4 class="country-txt">Tokyo</h4>
+                </div>
+                <h5 class="current-date-txt regular-txt">Wed, 09 May</h5>
+            </div>
+
+            <div class="weather-summary-container">
+                <img src="weather assets/partly-cloudy-day.svg" alt="icon" class="weather-summary-img">
+                <div class="weather-summary-info">
+                    <h1 class="temp-txt">29°</h1>
+                    <h4 class="conditions-txt regular-txt">Partly Cloudy</h4>
+                </div>
+            </div>
+
+            <div class="weather-conditions-container">
+                <div class="condition-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                        <path d="M491-200q12-1 20.5-9.5T520-230q0-14-9-22.5t-23-7.5q-41 3-87-22.5T343-375q-2-11-10.5-18t-19.5-7q-14 0-23 10.5t-6 24.5q17 91 80 130t127 35ZM480-80q-137 0-228.5-94T160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80Zm0-80q104 0 172-70.5T720-408q0-73-60.5-165T480-774Q361-665 300.5-573T240-408q0 107 68 177.5T480-160Zm0-320Z"/>
+                    </svg>
+                    <h5 class="regular-txt">Humidity</h5>
+                    <h5 class="humidity-value">55%</h5>
+                </div>
+
+                <div class="condition-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                        <path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/>
+                    </svg>
+                    <h5 class="regular-txt">Wind Speed</h5>
+                    <h5 class="wind-value">2 MPH</h5>
+                </div>
+            </div>
+
+            <!-- Forecast Section -->
+            <div class="forecast-section">
+                <h3 class="forecast-section-title">Upcoming Forecast</h3>
+                <div class="forecast-item-container"></div>
+            </div>
+        </section>
+
+
+
+        <section class="search-city section-message">
+            <img class="message-img" src="images/search-city.png" alt="search-concept-landing-page">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">Find out the weather conditions <br>of any city</h4>
+            </div>
+        </section>
+
+        <section class="not-found section-message" style="display: none;">
+            <img class="message-img" src="images/not-found.png"/>
+            <div class="message">
+                <h1>City Not Found</h1>
+                <h4 class="regular-txt">Please enter a valid city name</h4>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
