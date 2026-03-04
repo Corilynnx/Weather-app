@@ -50,7 +50,7 @@ Responsive layout and modern CSS styling
 
 <img width="400" height="303" alt="Screenshot 2026-01-29 at 6 28 42 PM" src="https://github.com/user-attachments/assets/d5b4bb61-2625-4e46-9792-9a0085f4d80c" />
 
-Tech Stack
+## Tech Stack
 
 HTML5 – semantic structure
 
