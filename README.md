@@ -1,4 +1,4 @@
-🌤️ Weather App
+## 🌤️ Weather App
 
 A beginner-friendly weather application built with vanilla JavaScript, focused on API integration, DOM manipulation, and clean UI state management. Users can search for a city to view current weather conditions and a short-term forecast.
 
@@ -28,8 +28,11 @@ Updates the UI dynamically based on app state
 
 <img width="413" height="358" alt="Screenshot 2026-01-29 at 6 25 34 PM" src="https://github.com/user-attachments/assets/6557fbe8-6479-4319-9782-f85f186ae83f" />
 
+## Live Demo
+https://weather-lynx.netlify.app/
 
-Skills Demonstrated
+
+## Skills Demonstrated
 
 Working with REST APIs
 
